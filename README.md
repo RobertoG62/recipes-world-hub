@@ -1,0 +1,136 @@
+# 🌍 World Recipes Hub
+
+> **The World's Flavors, Curated by AI**
+> A central hub connecting 6 authentic culinary traditions from around the globe.
+
+---
+
+## 🎯 Overview
+
+**World Recipes Hub** is a luxury minimalist landing page showcasing 6 authentic recipe collections from different countries. Each collection features traditional recipes curated and preserved using AI, maintaining culinary authenticity while making them accessible to modern cooks.
+
+**Live Site:** [https://robertog62.github.io/recipes-world-hub/](https://robertog62.github.io/recipes-world-hub/)
+
+---
+
+## 🍳 Featured Cuisines
+
+| Country | Collection | Specialties |
+|---------|-----------|-------------|
+| 🇹🇭 **Thailand** | [Thai Kitchen](https://robertog62.github.io/thai-recipes-app/) | Pad Thai, Tom Yum, Thai Curries |
+| 🇹🇷 **Turkey** | [Turkish Delights](https://robertog62.github.io/turkish-recipes-app/) | Kebabs, Mezes, Ottoman Recipes |
+| 🇮🇹 **Italy** | [Italian Kitchen](https://robertog62.github.io/italian-recipes-app/) | Pasta, Risotto, Regional Classics |
+| 🇬🇷 **Greece** | [Greek Taverna](https://robertog62.github.io/greek-recipes-app/) | Moussaka, Souvlaki, Island Specialties |
+| 🇫🇷 **France** | [French Cuisine](https://robertog62.github.io/french-recipes-app/) | French Gastronomy, Butter & Wine |
+| 🇦🇷 **Argentina** | [Argentine Asado](https://robertog62.github.io/argentine-recipes-app/) | Asado, Empanadas, Dulce de Leche |
+
+---
+
+## ✨ Features
+
+- **6 Culinary Traditions** — Complete recipe collections from around the world
+- **100+ Authentic Recipes** — Traditional recipes preserved with AI curation
+- **Bilingual Support** — Full English/Hebrew (RTL) translation
+- **Luxury Minimalist Design** — Gold, cream, and charcoal color palette
+- **Responsive Layout** — Optimized for mobile, tablet, and desktop
+- **Interactive Cards** — Hover effects and smooth animations
+- **Direct Links** — One-click access to each cuisine collection
+
+---
+
+## 🎨 Design System
+
+### Color Palette
+```
+Gold:        #C9A84C  (Primary accent)
+Gold Light:  #E8D9A0
+Gold Dark:   #A68A3C
+Cream:       #FAFAFA  (Background)
+Charcoal:    #1A1A1A  (Text)
+Navy:        #0A1628  (Dark sections)
+Warm Gray:   #F5F0EB  (Section backgrounds)
+```
+
+### Typography
+- **Headings:** Playfair Display (serif)
+- **Body:** Heebo (sans-serif)
+- **RTL Support:** Full Hebrew translation with RTL layout
+
+### Layout
+- **Hero Section** with background image and CTA
+- **6-card Grid** (responsive: 3 columns desktop, 2 tablet, 1 mobile)
+- **Stats Bar** with 4 metrics
+- **Architect Section** with profile and biography
+- **Footer** with all cuisine links
+
+---
+
+## 🚀 Technology Stack
+
+- **HTML5** — Semantic markup
+- **Tailwind CSS v4** (CDN) — Utility-first styling
+- **Vanilla JavaScript** — Language toggle, scroll animations, smooth scrolling
+- **Font Awesome 6.5** — Icon library
+- **Google Fonts** — Playfair Display + Heebo
+
+---
+
+## 📂 Project Structure
+
+```
+recipes-world-hub/
+├── index.html           # Main landing page
+├── images/
+│   └── roberto-architect.png  # Chef profile image
+└── README.md            # Documentation
+```
+
+---
+
+## 🌐 Deployment
+
+**Platform:** GitHub Pages
+**URL:** `https://robertog62.github.io/recipes-world-hub/`
+
+### Deploy Steps:
+1. Push to GitHub repository
+2. Enable GitHub Pages in Settings
+3. Select `main` branch as source
+4. Site will be live at the URL above
+
+---
+
+## 👨‍🍳 About the Architect
+
+**Roberto Goldreer** — AI Culinary Curator
+
+Roberto harnesses AI to preserve and share the world's culinary heritage. Every recipe undergoes rigorous curation: traditional cookbooks, family secrets, and regional variations are fed into advanced LLMs to create authentic guides available 24/7.
+
+**Mission:** Preserve authentic flavors at an uncompromising quality level.
+
+---
+
+## 📊 Stats
+
+- **6** Culinary Traditions
+- **100+** Authentic Recipes
+- **6** Countries Covered
+- **∞** Flavors Discovered
+
+---
+
+## 🔗 Related Projects
+
+- [Travel Authority Hub](https://robertog62.github.io/travel-authority-hub/) — Similar hub design for travel destinations
+- All 6 recipe collections (links above)
+
+---
+
+## 📄 License
+
+All recipes are curated for educational and cultural preservation purposes.
+© 2026 World Recipes Hub. All recipes AI-curated with culinary expertise.
+
+---
+
+**Built with ❤️ and AI by Roberto Goldreer**

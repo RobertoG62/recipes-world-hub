@@ -4,63 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The World's Flavors, Curated by AI | Global Recipes Hub</title>
+        <!-- Security policy declared before any resource so it governs them all.
+         style-src keeps 'unsafe-inline' only for Tailwind-generated inline styles;
+         there are no inline <style> blocks or style= attributes left in the markup.
+         frame-ancestors / X-Content-Type-Options need real headers, which GitHub
+         Pages cannot set - documented in governance/risk-register.md -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Self-hosted assets: zero third-party requests. See governance/data-map.md -->
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <link rel="stylesheet" href="assets/vendor/fontawesome/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/site.css">
     <meta name="description" content="Authentic recipes from 6 culinary traditions. Real flavors. Zero shortcuts.">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        gold: '#C9A84C',
-                        'gold-light': '#E8D9A0',
-                        'gold-dark': '#A68A3C',
-                        cream: '#FAFAFA',
-                        charcoal: '#1A1A1A',
-                        navy: '#0A1628',
-                        'warm-gray': '#F5F0EB',
-                    },
-                    fontFamily: {
-                        display: ['Playfair Display', 'serif'],
-                        body: ['Heebo', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        [dir="rtl"] { font-family: 'Heebo', sans-serif; }
-        [dir="rtl"] .font-display { font-family: 'Playfair Display', serif; }
-
-        .card-hover { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
-        .card-hover:hover { transform: translateY(-8px); }
-        .card-hover:hover .card-overlay { opacity: 0.4; }
-        .card-hover:hover .card-cta { opacity: 1; transform: translateY(0); }
-
-        .card-overlay { transition: opacity 0.5s ease; }
-        .card-cta { opacity: 0; transform: translateY(10px); transition: all 0.4s ease 0.1s; }
-
-        .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
-
-        .gold-line { background: linear-gradient(90deg, transparent, #C9A84C, transparent); }
-
-        .badge-pulse { animation: pulse-gold 2s infinite; }
-        @keyframes pulse-gold {
-            0%, 100% { box-shadow: 0 0 0 0 rgba(201, 168, 76, 0.4); }
-            50% { box-shadow: 0 0 0 8px rgba(201, 168, 76, 0); }
-        }
-
-        .hero-bg {
-            background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1920&q=80');
-            background-size: cover;
-            background-position: center;
-        }
-    </style>
 </head>
 <body class="bg-cream text-charcoal font-body antialiased">
+
+    <a href="#main" class="skip-link" data-en="Skip to main content" data-he="דלג לתוכן העיקרי">Skip to main content</a>
 
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 bg-cream/90 backdrop-blur-md border-b border-warm-gray/50">
@@ -73,13 +34,15 @@
                 <a href="#cuisines" class="hidden md:inline text-sm font-medium text-charcoal/70 hover:text-charcoal transition-colors" data-en="Cuisines" data-he="מטבחים">Cuisines</a>
                 <a href="#architect" class="hidden md:inline text-sm font-medium text-charcoal/70 hover:text-charcoal transition-colors" data-en="The Chef" data-he="השף">The Chef</a>
                 <!-- Language Toggle -->
-                <button id="langToggle" onclick="toggleLanguage()" class="flex items-center gap-2 px-3 py-1.5 rounded-full border border-charcoal/15 hover:border-gold/50 transition-all text-sm font-medium">
+                <button id="langToggle" class="flex items-center gap-2 px-3 py-1.5 rounded-full border border-charcoal/15 hover:border-gold/50 transition-all text-sm font-medium">
                     <span id="langLabel">EN</span>
                     <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                 </button>
             </div>
         </div>
     </nav>
+
+    <main id="main">
 
     <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center justify-center hero-bg">
@@ -97,13 +60,13 @@
             <p class="fade-in text-lg md:text-xl text-white/80 font-light max-w-2xl mx-auto mb-10 leading-relaxed" data-en="Authentic recipes from 6 culinary traditions.<br>Real flavors. Zero shortcuts." data-he="מתכונים אותנטיים מ-6 מסורות קולינריות.<br>טעמים אמיתיים. ללא קיצורי דרך.">
                 Authentic recipes from 6 culinary traditions.<br>Real flavors. Zero shortcuts.
             </p>
-            <a href="#cuisines" class="fade-in inline-flex items-center gap-3 px-8 py-4 bg-gold hover:bg-gold-dark text-white font-medium rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-gold/25">
+            <a href="#cuisines" class="fade-in inline-flex items-center gap-3 px-8 py-4 bg-gold hover:bg-gold-dark text-charcoal font-medium rounded-full transition-all duration-300 hover:shadow-lg hover:shadow-gold/25">
                 <span data-en="Explore Cuisines" data-he="גלו מטבחים">Explore Cuisines</span>
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
             </a>
         </div>
         <!-- Scroll indicator -->
-        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40">
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/70">
             <span class="text-xs tracking-widest uppercase">Scroll</span>
             <div class="w-px h-10 bg-gradient-to-b from-white/40 to-transparent"></div>
         </div>
@@ -121,7 +84,7 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <!-- Card 1: Thailand -->
-                <a href="https://robertog62.github.io/thai-recipes-app/" target="_blank" class="group card-hover block relative rounded-2xl overflow-hidden shadow-lg shadow-charcoal/5 aspect-[3/4]">
+                <a href="https://robertog62.github.io/thai-recipes-app/" target="_blank" rel="noopener noreferrer" class="group card-hover block relative rounded-2xl overflow-hidden shadow-lg shadow-charcoal/5 aspect-[3/4]">
                     <img src="images/Thailand.jpg" alt="Thai Cuisine" class="absolute inset-0 w-full h-full object-cover">
                     <div class="card-overlay absolute inset-0 bg-charcoal/50"></div>
                     <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent"></div>
@@ -143,7 +106,7 @@
                 </a>
 
                 <!-- Card 2: Turkey -->
-                <a href="https://robertog62.github.io/turkish-recipes-app/" target="_blank" class="group card-hover block relative rounded-2xl overflow-hidden shadow-lg shadow-charcoal/5 aspect-[3/4]">
+                <a href="https://robertog62.github.io/turkish-recipes-app/" target="_blank" rel="noopener noreferrer" class="group card-hover block relative rounded-2xl overflow-hidden shadow-lg shadow-charcoal/5 aspect-[3/4]">
                     <img src="images/Turkey.jpg" alt="Turkish Cuisine" class="absolute inset-0 w-full h-full object-cover">
                     <div class="card-overlay absolute inset-0 bg-charcoal/50"></div>
                     <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent"></div>
@@ -163,7 +126,7 @@
                 </a>
 
                 <!-- Card 3: Italy -->
-                <a href="https://robertog62.github.io/italian-recipes-app/#/" target="_blank" class="group card-hover block relative rounded-2xl overflow-hidden shadow-lg shadow-charcoal/5 aspect-[3/4]">
+                <a href="https://robertog62.github.io/italian-recipes-app/#/" target="_blank" rel="noopener noreferrer" class="group card-hover block relative rounded-2xl overflow-hidden shadow-lg shadow-charcoal/5 aspect-[3/4]">
                     <img src="images/Italy.jpg" alt="Italian Cuisine" class="absolute inset-0 w-full h-full object-cover">
                     <div class="card-overlay absolute inset-0 bg-charcoal/50"></div>
                     <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent"></div>
@@ -183,7 +146,7 @@
                 </a>
 
                 <!-- Card 4: Greece -->
-                <a href="https://robertog62.github.io/greek-recipes-app/#/" target="_blank" class="group card-hover block relative rounded-2xl overflow-hidden shadow-lg shadow-charcoal/5 aspect-[3/4]">
+                <a href="https://robertog62.github.io/greek-recipes-app/#/" target="_blank" rel="noopener noreferrer" class="group card-hover block relative rounded-2xl overflow-hidden shadow-lg shadow-charcoal/5 aspect-[3/4]">
                     <img src="images/Greece.jpg" alt="Greek Cuisine" class="absolute inset-0 w-full h-full object-cover">
                     <div class="card-overlay absolute inset-0 bg-charcoal/50"></div>
                     <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent"></div>
@@ -203,7 +166,7 @@
                 </a>
 
                 <!-- Card 5: France -->
-                <a href="https://robertog62.github.io/french-recipes-app/" target="_blank" class="group card-hover block relative rounded-2xl overflow-hidden shadow-lg shadow-charcoal/5 aspect-[3/4]">
+                <a href="https://robertog62.github.io/french-recipes-app/" target="_blank" rel="noopener noreferrer" class="group card-hover block relative rounded-2xl overflow-hidden shadow-lg shadow-charcoal/5 aspect-[3/4]">
                     <img src="images/France.jpg" alt="French Cuisine" class="absolute inset-0 w-full h-full h-full object-cover">
                     <div class="card-overlay absolute inset-0 bg-charcoal/50"></div>
                     <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent"></div>
@@ -223,7 +186,7 @@
                 </a>
 
                 <!-- Card 6: Argentina -->
-                <a href="https://robertog62.github.io/argentine-recipes-app/" target="_blank" class="group card-hover block relative rounded-2xl overflow-hidden shadow-lg shadow-charcoal/5 aspect-[3/4]">
+                <a href="https://robertog62.github.io/argentine-recipes-app/" target="_blank" rel="noopener noreferrer" class="group card-hover block relative rounded-2xl overflow-hidden shadow-lg shadow-charcoal/5 aspect-[3/4]">
                     <img src="images/Argentina.jpg" alt="Argentine Cuisine" class="absolute inset-0 w-full h-full object-cover">
                     <div class="card-overlay absolute inset-0 bg-charcoal/50"></div>
                     <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/20 to-transparent"></div>
@@ -333,67 +296,35 @@
     </section>
 
     <!-- Footer -->
+    </main>
+
     <footer class="py-16 px-6 bg-charcoal text-white">
         <div class="max-w-7xl mx-auto text-center">
             <div class="font-display text-2xl font-semibold mb-2">
                 <span>World Recipes</span><span class="text-gold">.</span>
             </div>
-            <p class="text-white/40 text-sm mb-8" data-en="The world's most authentic AI-curated recipe collections." data-he="אוספי המתכונים המאוצרים ביותר בעולם, באוצרות AI.">The world's most authentic AI-curated recipe collections.</p>
+            <p class="text-white/70 text-sm mb-8" data-en="The world's most authentic AI-curated recipe collections." data-he="אוספי המתכונים המאוצרים ביותר בעולם, באוצרות AI.">The world's most authentic AI-curated recipe collections.</p>
             <div class="flex flex-wrap justify-center gap-6 text-sm text-white/50 mb-8">
-                <a href="https://robertog62.github.io/thai-recipes-app/" target="_blank" class="hover:text-gold transition-colors">Thailand</a>
-                <a href="https://robertog62.github.io/turkish-recipes-app/" target="_blank" class="hover:text-gold transition-colors">Turkey</a>
-                <a href="https://robertog62.github.io/italian-recipes-app/#/" target="_blank" class="hover:text-gold transition-colors">Italy</a>
-                <a href="https://robertog62.github.io/greek-recipes-app/#/" target="_blank" class="hover:text-gold transition-colors">Greece</a>
-                <a href="https://robertog62.github.io/french-recipes-app/" target="_blank" class="hover:text-gold transition-colors">France</a>
-                <a href="https://robertog62.github.io/argentine-recipes-app/" target="_blank" class="hover:text-gold transition-colors">Argentina</a>
+                <a href="https://robertog62.github.io/thai-recipes-app/" target="_blank" rel="noopener noreferrer" class="hover:text-gold transition-colors">Thailand</a>
+                <a href="https://robertog62.github.io/turkish-recipes-app/" target="_blank" rel="noopener noreferrer" class="hover:text-gold transition-colors">Turkey</a>
+                <a href="https://robertog62.github.io/italian-recipes-app/#/" target="_blank" rel="noopener noreferrer" class="hover:text-gold transition-colors">Italy</a>
+                <a href="https://robertog62.github.io/greek-recipes-app/#/" target="_blank" rel="noopener noreferrer" class="hover:text-gold transition-colors">Greece</a>
+                <a href="https://robertog62.github.io/french-recipes-app/" target="_blank" rel="noopener noreferrer" class="hover:text-gold transition-colors">France</a>
+                <a href="https://robertog62.github.io/argentine-recipes-app/" target="_blank" rel="noopener noreferrer" class="hover:text-gold transition-colors">Argentina</a>
             </div>
             <div class="gold-line h-px w-32 mx-auto my-8"></div>
-            <p class="text-white/30 text-xs">&copy; 2026 World Recipes Hub. All recipes AI-curated with culinary expertise.</p>
+            <p class="text-white/60 text-xs leading-relaxed max-w-3xl mx-auto mb-6"
+               data-en="AI transparency: the recipes and texts on this site were generated and edited with AI tools under human review. They are general guidance, not professional culinary or nutritional advice."
+               data-he="שקיפות AI: המתכונים והטקסטים באתר נוצרו ונערכו בסיוע כלי בינה מלאכותית, בבקרה אנושית. הם מידע כללי ואינם ייעוץ קולינרי או תזונתי מקצועי.">AI transparency: the recipes and texts on this site were generated and edited with AI tools under human review. They are general guidance, not professional culinary or nutritional advice.</p>
+            <div class="flex flex-wrap justify-center gap-x-8 gap-y-3 mb-6">
+                <a href="privacy.html" class="text-white/60 hover:text-gold text-xs transition-colors" data-en="Privacy Policy" data-he="מדיניות פרטיות">Privacy Policy</a>
+                <a href="terms.html" class="text-white/60 hover:text-gold text-xs transition-colors" data-en="Terms of Use" data-he="תנאי שימוש">Terms of Use</a>
+                <a href="accessibility.html" class="text-white/60 hover:text-gold text-xs transition-colors" data-en="Accessibility" data-he="הצהרת נגישות">Accessibility</a>
+            </div>
+            <p class="text-white/60 text-xs">&copy; 2026 World Recipes Hub. All recipes AI-curated with culinary expertise.</p>
         </div>
     </footer>
 
-    <script>
-        // Language toggle
-        let currentLang = 'en';
-
-        function toggleLanguage() {
-            currentLang = currentLang === 'en' ? 'he' : 'en';
-            const html = document.documentElement;
-            html.lang = currentLang === 'he' ? 'he' : 'en';
-            html.dir = currentLang === 'he' ? 'rtl' : 'ltr';
-            document.getElementById('langLabel').textContent = currentLang === 'he' ? 'HE' : 'EN';
-
-            document.querySelectorAll('[data-en]').forEach(el => {
-                const text = el.getAttribute(`data-${currentLang}`);
-                if (text) {
-                    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-                        el.placeholder = text;
-                    } else {
-                        el.innerHTML = text;
-                    }
-                }
-            });
-        }
-
-        // Scroll animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
-
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            });
-        });
-    </script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>

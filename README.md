@@ -1,13 +1,13 @@
 # 🌍 World Recipes Hub
 
 > **The World's Flavors, Curated by AI**
-> A central hub connecting 17 authentic culinary traditions from around the globe.
+> A central hub connecting 18 authentic culinary traditions from around the globe.
 
 ---
 
 ## 🎯 Overview
 
-**World Recipes Hub** is a luxury minimalist landing page showcasing 17 authentic recipe collections from different countries. Each collection features traditional recipes curated and preserved using AI, maintaining culinary authenticity while making them accessible to modern cooks.
+**World Recipes Hub** is a luxury minimalist landing page showcasing 18 authentic recipe collections from different countries. Each collection features traditional recipes curated and preserved using AI, maintaining culinary authenticity while making them accessible to modern cooks.
 
 **Live Site:** [https://robertog62.github.io/recipes-world-hub/](https://robertog62.github.io/recipes-world-hub/)
 
@@ -34,13 +34,14 @@
 | 🇪🇬 **Egypt** | [Egyptian Kitchen](https://robertog62.github.io/egyptian-recipes-app/) | Ful, taamia, mulukhiyah, koshari — all kosher |
 | 🇮🇱 **Israel** | [Israeli Kitchen](https://robertog62.github.io/israeli-recipes-app/) | Hummus, falafel, Jerusalem mixed grill, ptitim — all kosher |
 | 🇹🇳 **Tunisia** | [Tunisian Kitchen](https://robertog62.github.io/tunisian-recipes-app/) | Brik, lablabi, bkaila, shakshuka — all kosher |
+| 🇩🇿 **Algeria** | [Algerian Kitchen](https://robertog62.github.io/algerian-recipes-app/) | Lham lahlou, chorba beida, mhadjeb, bourek — all kosher |
 
 ---
 
 ## ✨ Features
 
-- **17 Culinary Traditions** — Complete recipe collections from around the world
-- **850+ Authentic Recipes** — Traditional recipes preserved with AI curation
+- **18 Culinary Traditions** — Complete recipe collections from around the world
+- **900+ Authentic Recipes** — Traditional recipes preserved with AI curation
 - **Bilingual Support** — Full English/Hebrew (RTL) translation
 - **Luxury Minimalist Design** — Gold, cream, and charcoal color palette
 - **Responsive Layout** — Optimized for mobile, tablet, and desktop
@@ -133,7 +134,7 @@ Roberto harnesses AI to preserve and share the world's culinary heritage. Every 
 ## 🔗 Related Projects
 
 - [Travel Authority Hub](https://robertog62.github.io/travel-authority-hub/) — Similar hub design for travel destinations
-- All 17 recipe collections (links above)
+- All 18 recipe collections (links above)
 
 ---
 
